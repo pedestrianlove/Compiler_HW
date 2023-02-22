@@ -3,6 +3,40 @@
 ## 檔案結構
 <img width="415" alt="image" src="https://user-images.githubusercontent.com/37164678/220504706-0ce63e9d-e9bd-4b27-a0c9-e5221588b814.png">
 
+## Makefile
+```make
+TARGET ?= 1024
+
+build:
+	@echo "----------------------------------------"
+	@echo "- Building the source...               -"
+	@echo "----------------------------------------"
+	cc 	-o out.0 src/mmd_serial.c
+	cc -O1 	-o out.1 src/mmd_serial.c
+	cc -O2 	-o out.2 src/mmd_serial.c
+	cc -O3 	-o out.3 src/mmd_serial.c
+
+run:
+	@echo "----------------------------------------"
+	@echo "- Time the program...                  -"
+	@echo "----------------------------------------"
+	@echo " No optimization: "
+	@time ./out.0 $(TARGET) | awk -F ' ' '{print $3}'
+	@echo "----------------------------------------"
+	@echo " O1 optimization: "
+	@time ./out.1 $(TARGET) | awk -F ' ' '{print $3}'
+	@echo "----------------------------------------"
+	@echo " O2 optimization: "
+	@time ./out.2 $(TARGET) | awk -F ' ' '{print $3}'
+	@echo "----------------------------------------"
+	@echo " O3 optimization: "
+	@time ./out.3 $(TARGET) | awk -F ' ' '{print $3}'
+	@echo "----------------------------------------"
+
+clean:
+	rm out.*
+```
+
 ## 編譯
 <img width="462" alt="image" src="https://user-images.githubusercontent.com/37164678/220504861-759bd81c-30d3-4a20-90cd-4e10e5e0116f.png">
 
