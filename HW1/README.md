@@ -15,30 +15,34 @@
  No optimization: 
 20480.000000
 
-real    1m15.585s
-user    1m15.545s
-sys     0m0.022s
+real	1m18.217s
+user	1m18.162s
+sys	0m0.019s
+-rwxr-xr-x 1 jsl jsl 15816 Mar  1 10:29 out.0
 ----------------------------------------
  O1 optimization: 
 20480.000000
 
-real    0m51.715s
-user    0m51.688s
-sys     0m0.010s
+real	0m53.306s
+user	0m53.265s
+sys	0m0.017s
+-rwxr-xr-x 1 jsl jsl 15856 Mar  1 10:29 out.1
 ----------------------------------------
  O2 optimization: 
 20480.000000
 
-real    0m41.113s
-user    0m41.050s
-sys     0m0.040s
+real	0m43.038s
+user	0m43.002s
+sys	0m0.011s
+-rwxr-xr-x 1 jsl jsl 15856 Mar  1 10:29 out.2
 ----------------------------------------
  O3 optimization: 
 20480.000000
 
-real    0m41.175s
-user    0m41.139s
-sys     0m0.020s
+real	0m40.689s
+user	0m40.650s
+sys	0m0.020s
+-rwxr-xr-x 1 jsl jsl 15856 Mar  1 10:29 out.3
 ----------------------------------------
 ```
 

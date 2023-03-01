@@ -15,15 +15,19 @@ run:
 	@echo "----------------------------------------"
 	@echo " No optimization: "
 	@time ./out.0 $(TARGET) | awk -F ' ' '{print $3}'
+	@ls -la | grep "out.0"
 	@echo "----------------------------------------"
 	@echo " O1 optimization: "
 	@time ./out.1 $(TARGET) | awk -F ' ' '{print $3}'
+	@ls -la | grep "out.1"
 	@echo "----------------------------------------"
 	@echo " O2 optimization: "
 	@time ./out.2 $(TARGET) | awk -F ' ' '{print $3}'
+	@ls -la | grep "out.2"
 	@echo "----------------------------------------"
 	@echo " O3 optimization: "
 	@time ./out.3 $(TARGET) | awk -F ' ' '{print $3}'
+	@ls -la | grep "out.3"
 	@echo "----------------------------------------"
 
 clean:
